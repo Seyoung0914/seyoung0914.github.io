@@ -1,5 +1,126 @@
+/* 기본적인 스타일 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 바디와 HTML 요소를 전체 창 크기로 설정 */
+html,
 body {
-    background-color: beige;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    color: white; /* 전체 텍스트 색상 흰색으로 설정 */
+}
+
+/* 바디 설정 */
+body {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column; /* 콘텐츠를 위에서 아래로 배치 */
+    justify-content: center; /* 콘텐츠를 수직으로 가운데 정렬 */
+    align-items: center; /* 콘텐츠를 수평으로 가운데 정렬 */
+}
+
+/* 배경 이미지 처리 */
+body img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* 이미지가 다른 콘텐츠 뒤에 위치하도록 설정 */
+}
+
+/* 중앙에 위치할 컨테이너 스타일 설정 */
+.container {
+    text-align: start;
+    background-color: rgba(0, 0, 0, 0.5); /* 반투명 배경 */
+    padding: 50px;
+    border-radius: 50px;
+}
+
+/* 시계 스타일 */
+h2#clock {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+/* 폼 스타일 */
+form#login-form,
+form#todo-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 입력 필드 스타일 */
+form#login-form input,
+form#todo-form input {
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    color: black; /* 입력 필드의 텍스트 색상 */
+}
+
+/* 버튼 스타일 */
+form#login-form button,
+form#todo-form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4caf50;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+/* 버튼 호버 스타일 */
+form#login-form button:hover,
+form#todo-form button:hover {
+    background-color: #45a049;
+}
+
+/* 인사말 스타일 */
+h1#greeting {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* 할 일 목록 스타일 */
+ul#todo-list {
+    list-style: none;
+    padding: 0;
+}
+
+ul#todo-list li {
+    padding: 10px;
+    border-bottom: 1px solid white;
+}
+
+/* 인용구와 날씨 스타일 */
+div#quote,
+div#weather {
+    margin-top: 20px;
+}
+
+div#quote span,
+div#weather span {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* 텍스트 그림자 추가 */
+h1,
+h2,
+p {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* 어두운 그림자로 텍스트 강조 */
 }
 
 .hidden {
